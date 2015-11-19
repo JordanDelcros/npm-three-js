@@ -1,0 +1,29 @@
+{
+	"name": "npm-three-js",
+	"version": "0.0.1",
+	"description": "JavaScript 3D library",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/JordanDelcros/three.js"
+	},
+	"keywords": [
+		"three",
+		"three.js",
+		"3d",
+		"webgl"
+	],
+	"author": "Jordan Delcros",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/JordanDelcros/three.js/issues"
+	},
+	"homepage": "http://threejs.org/",
+	"devDependencies": {
+		"jscs": "^1.13.1",
+		"lodash": "^3.10.0"
+	}
+}
