@@ -1,6 +1,6 @@
 {
-	"name": "npm-three-js",
-	"version": "0.0.1",
+	"name": "three-js",
+	"version": "0.0.2",
 	"description": "JavaScript 3D library",
 	"main": "index.js",
 	"scripts": {
