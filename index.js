@@ -8,7 +8,7 @@
 
 			for( var include = 0, length = includes.length; include < length; include++ ){
 
-				require("./includes/" + includes[include] + ".js")(THREE);
+				require("./addons/" + includes[include] + ".js")(THREE);
 
 			};
 
