@@ -2,13 +2,13 @@
 
 	var THREE = require("./three.js");
 
-	module.exports = function( includes ){
+	module.exports = function( addons ){
 
-		if( includes instanceof Array ){
+		if( addons instanceof Array ){
 
-			for( var include = 0, length = includes.length; include < length; include++ ){
+			for( var addon = 0, length = addons.length; addon < length; addon++ ){
 
-				require("./addons/" + includes[include] + ".js")(THREE);
+				require("./addons/" + addons[addon] + ".js")(THREE);
 
 			};
 
