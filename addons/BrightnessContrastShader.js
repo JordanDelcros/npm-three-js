@@ -1,58 +1,61 @@
-/**
- * @author tapio / http://tapio.github.com/
- *
- * Brightness and contrast adjustment
- * https://github.com/evanw/glfx.js
- * brightness: -1 to 1 (-1 is solid black, 0 is no change, and 1 is solid white)
- * contrast: -1 to 1 (-1 is solid gray, 0 is no change, and 1 is maximum contrast)
- */
+module.exports = function( THREE ){
+	/**
+	 * @author tapio / http://tapio.github.com/
+	 *
+	 * Brightness and contrast adjustment
+	 * https://github.com/evanw/glfx.js
+	 * brightness: -1 to 1 (-1 is solid black, 0 is no change, and 1 is solid white)
+	 * contrast: -1 to 1 (-1 is solid gray, 0 is no change, and 1 is maximum contrast)
+	 */
 
-THREE.BrightnessContrastShader = {
+	THREE.BrightnessContrastShader = {
 
-	uniforms: {
+		uniforms: {
 
-		"tDiffuse":   { type: "t", value: null },
-		"brightness": { type: "f", value: 0 },
-		"contrast":   { type: "f", value: 0 }
+			"tDiffuse":   { type: "t", value: null },
+			"brightness": { type: "f", value: 0 },
+			"contrast":   { type: "f", value: 0 }
 
-	},
+		},
 
-	vertexShader: [
+		vertexShader: [
 
-		"varying vec2 vUv;",
+			"varying vec2 vUv;",
 
-		"void main() {",
+			"void main() {",
 
-			"vUv = uv;",
+				"vUv = uv;",
 
-			"gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );",
+				"gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );",
 
-		"}"
+			"}"
 
-	].join( "\n" ),
+		].join( "\n" ),
 
-	fragmentShader: [
+		fragmentShader: [
 
-		"uniform sampler2D tDiffuse;",
-		"uniform float brightness;",
-		"uniform float contrast;",
+			"uniform sampler2D tDiffuse;",
+			"uniform float brightness;",
+			"uniform float contrast;",
 
-		"varying vec2 vUv;",
+			"varying vec2 vUv;",
 
-		"void main() {",
+			"void main() {",
 
-			"gl_FragColor = texture2D( tDiffuse, vUv );",
+				"gl_FragColor = texture2D( tDiffuse, vUv );",
 
-			"gl_FragColor.rgb += brightness;",
+				"gl_FragColor.rgb += brightness;",
 
-			"if (contrast > 0.0) {",
-				"gl_FragColor.rgb = (gl_FragColor.rgb - 0.5) / (1.0 - contrast) + 0.5;",
-			"} else {",
-				"gl_FragColor.rgb = (gl_FragColor.rgb - 0.5) * (1.0 + contrast) + 0.5;",
-			"}",
+				"if (contrast > 0.0) {",
+					"gl_FragColor.rgb = (gl_FragColor.rgb - 0.5) / (1.0 - contrast) + 0.5;",
+				"} else {",
+					"gl_FragColor.rgb = (gl_FragColor.rgb - 0.5) * (1.0 + contrast) + 0.5;",
+				"}",
 
-		"}"
+			"}"
 
-	].join( "\n" )
+		].join( "\n" )
 
-};
+	};
+
+}

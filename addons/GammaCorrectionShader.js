@@ -1,50 +1,53 @@
-/**
- * @author WestLangley / http://github.com/WestLangley
- *
- * Gamma Correction Shader
- * http://en.wikipedia.org/wiki/gamma_correction
- */
+module.exports = function( THREE ){
+	/**
+	 * @author WestLangley / http://github.com/WestLangley
+	 *
+	 * Gamma Correction Shader
+	 * http://en.wikipedia.org/wiki/gamma_correction
+	 */
 
-THREE.GammaCorrectionShader = {
+	THREE.GammaCorrectionShader = {
 
-	uniforms: {
+		uniforms: {
 
-		"tDiffuse": { type: "t", value: null },
+			"tDiffuse": { type: "t", value: null },
 
-	},
+		},
 
-	vertexShader: [
+		vertexShader: [
 
-		"varying vec2 vUv;",
+			"varying vec2 vUv;",
 
-		"void main() {",
+			"void main() {",
 
-			"vUv = uv;",
-			"gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );",
+				"vUv = uv;",
+				"gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );",
 
-		"}"
+			"}"
 
-	].join( "\n" ),
+		].join( "\n" ),
 
-	fragmentShader: [
+		fragmentShader: [
 
-		"#define GAMMA_OUTPUT",
-		"#define GAMMA_FACTOR 2",
+			"#define GAMMA_OUTPUT",
+			"#define GAMMA_FACTOR 2",
 
-		"uniform sampler2D tDiffuse;",
+			"uniform sampler2D tDiffuse;",
 
-		"varying vec2 vUv;",
+			"varying vec2 vUv;",
 
-		THREE.ShaderChunk[ "common" ],
+			THREE.ShaderChunk[ "common" ],
 
-		"void main() {",
+			"void main() {",
 
-			"vec4 tex = texture2D( tDiffuse, vec2( vUv.x, vUv.y ) );",
+				"vec4 tex = texture2D( tDiffuse, vec2( vUv.x, vUv.y ) );",
 
-			"gl_FragColor = vec4( linearToOutput( tex.rgb ), tex.a );",
+				"gl_FragColor = vec4( linearToOutput( tex.rgb ), tex.a );",
 
-		"}"
+			"}"
 
-	].join( "\n" )
+		].join( "\n" )
 
-};
+	};
+
+}
