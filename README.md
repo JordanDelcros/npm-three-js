@@ -23,17 +23,57 @@ var THREE = require("three-js")(["EffectComposer"]);
 
 ## available addons
  - AdaptativeToneMapping
+ - BasicShader
+ - BleachBypassShader
+ - BlendShader
+ - BloomShader
  - BloomPass
  - BokehPass
+ - BokehShader
+ - BokehShader2
+ - BrightnessContrastShader
+ - ColorCorrectionShader
+ - ColorifyShader
+ - ConvolutionShader
+ - CopyShader
+ - DigitalGlitch
+ - DOFMipMapShader
  - DotScreenPass
+ - DotScreenShader
+ - EdgeShader
+ - EdgeShader2
  - EffectComposer
  - FilmPass
+ - FilmShader
+ - FocusShader
+ - FresnelShader
+ - FXAAShader
+ - GammaCorrectionShader
  - GlitchPass
+ - HorizontalBlurShader
+ - HorizontalTiltShiftShader
+ - HueSaturationShader
+ - KaleidoShader
+ - LuminosityShader
  - MaskPass
+ - MirrorShader
+ - NormalMapShader
+ - OceanShader
+ - ParallaxShader
  - RenderPass
+ - RGBShiftShader
  - SavePass
+ - SepiaShader
  - ShaderPass
+ - SSAOShader
+ - TechnicolorShader
  - TexturePass
+ - ToneMapShader
+ - TriangleBlurShader
+ - UnpackDepthRGBAShader
+ - VerticalBlurShader
+ - VerticalTiltShiftShader
+ - VignetteShader
 
 ## request an addon
 
