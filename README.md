@@ -1,6 +1,6 @@
 # npm three.js
 
-NPM version of three-js 73 and its addons.
+NPM version of three-js 74 and its addons.
 
 ## install
 

@@ -1,6 +1,6 @@
 {
 	"name": "three-js",
-	"version": "73.0.6",
+	"version": "74.0.1",
 	"description": "JavaScript 3D library and its addons",
 	"main": "index.js",
 	"scripts": {
