@@ -32,6 +32,7 @@ var THREE = require("three-js")(["EffectComposer"]);
  - BokehShader
  - BokehShader2
  - BrightnessContrastShader
+ - CanvasRenderer
  - ColorCorrectionShader
  - ColorifyShader
  - ConvolutionShader
@@ -57,6 +58,7 @@ var THREE = require("three-js")(["EffectComposer"]);
  - JSONLoader
  - KaleidoShader
  - LuminosityShader
+ - MarchingCubes
  - MaskPass
  - MirrorShader
  - MTLLoader
@@ -64,6 +66,7 @@ var THREE = require("three-js")(["EffectComposer"]);
  - OBJLoader
  - OceanShader
  - ParallaxShader
+ - Projector
  - RenderPass
  - RGBShiftShader
  - SavePass
