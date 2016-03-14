@@ -36,6 +36,7 @@ var THREE = require("three-js")(["EffectComposer"]);
  - ColorifyShader
  - ConvolutionShader
  - CopyShader
+ - DDSLoader
  - DigitalGlitch
  - DOFMipMapShader
  - DotScreenPass
@@ -53,11 +54,14 @@ var THREE = require("three-js")(["EffectComposer"]);
  - HorizontalBlurShader
  - HorizontalTiltShiftShader
  - HueSaturationShader
+ - JSONLoader
  - KaleidoShader
  - LuminosityShader
  - MaskPass
  - MirrorShader
+ - MTLLoader
  - NormalMapShader
+ - OBJLoader
  - OceanShader
  - ParallaxShader
  - RenderPass
