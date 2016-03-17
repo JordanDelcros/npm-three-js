@@ -73,6 +73,7 @@ var THREE = require("three-js")(["EffectComposer"]);
  - SepiaShader
  - ShaderPass
  - SSAOShader
+ - SVGLoader
  - TechnicolorShader
  - TexturePass
  - ToneMapShader

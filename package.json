@@ -25,8 +25,5 @@
 		"url": "https://github.com/JordanDelcros/npm-three-js/issues"
 	},
 	"homepage": "http://threejs.org/",
-	"devDependencies": {
-		"jscs": "^1.13.1",
-		"lodash": "^3.10.0"
-	}
+	"devDependencies": {}
 }
