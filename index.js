@@ -6,21 +6,25 @@
 
 		if( addons instanceof Array ){
 
-			for( var addon = 0, length = addons.length; addon < length; addon++ ){
+			for( var addonIndex = 0, length = addons.length; addonIndex < length; addonIndex++ ){
 				
-				var additive = addons[addon];
+				var addon = addons[addonIndex];
 				
-				if (additive instanceof Function) {
-					additive(THREE);
-				}
+				if( addon instanceof Function ){
 
-				else if (typeof additive === "string") {
-					require("./addons/" + additive + ".js")(THREE);
+					addon(THREE);
+
 				}
-				
+				else if( typeof addon === "string" ){
+
+					require("./addons/" + addon + ".js")(THREE);
+
+				}
 				else {
+
 					throw new Error("Invalid module type provided");
-				}
+
+				};
 				
 			};
 

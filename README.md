@@ -1,6 +1,6 @@
 # npm three.js
 
-NPM version of three-js 77 and its addons.
+NPM version of three-js 78 and its addons.
 
 ## install
 
@@ -8,18 +8,21 @@ NPM version of three-js 77 and its addons.
 npm i three-js
 ```
 
-## import
+## import with... import
+```javascript
+import THREELib from "three-js";
+var THREE = THREELib(); // return THREE JS
+// or
+var THREE = THREELib(["EffectComposer", ...]); // return THREE JS extended by its addons
+```
 
-```
-var THREE = require("three-js")();
-// return only three-js
-```
+## import with require
 
-you can extends three by its official addons
+```javascript
+var THREE = require("three-js")(); // return THREE JS
+// or
+var THREE = require("three-js")(["EffectComposer", ...]); // return THREE JS extended by its addons
 ```
-var THREE = require("three-js")(["EffectComposer"]);
-// return three-js extended by THREE.EffectComposer
-````
 
 ## available addons
  - AdaptativeToneMapping
@@ -65,6 +68,7 @@ var THREE = require("three-js")(["EffectComposer"]);
  - NormalMapShader
  - OBJLoader
  - OceanShader
+ - OrbitControls
  - ParallaxShader
  - Projector
  - RenderPass
@@ -89,15 +93,15 @@ There is a lot of three-js addons, if one is missing, feel free to make a pull r
 
 ## make a pull-request
 
-Three-js addons looks like this in standard js:
-```
+Three-js addons looks like that in common js:
+```javascript
 THREE.EffectComposer = function(){
 	//...
 }
 ```
 
-You only have to encapsulate the entire addon like this:
-```
+You only have to encapsulate the entire addon like that:
+```javascript
 module.export = function( THREE ){
 	
 	THREE.EffectComposer = function(){
@@ -107,6 +111,6 @@ module.export = function( THREE ){
 };
 ```
 
-Only official addons or very honorable and stable addons will be validated.
+Only official or very honorable and stable addons will be accepted/validated.
 
 All tributes to original authors.
