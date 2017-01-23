@@ -1,3 +1,5 @@
+# DEPRECATED IN FAVOR OF [ORIGINAL REPO](https://github.com/mrdoob/three.js/) THAT NOW SUPPORT ES6.
+
 # npm three.js
 
 NPM version of three-js 79 and its addons.
